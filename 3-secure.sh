@@ -9,6 +9,9 @@ function execute () {
   eval $COMMAND
 }
 
+execute 'view cat.ts'
+
+execute 'cat cat.ts'
 
 execute 'deno cat.ts /etc/passwd'
 
