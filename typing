@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ $# -lt 2 ]; then
+    echo "Few arguments!" 1>&2
+    exit 1
+fi
+
+input=$1
+length=$((${#input} - 1)) # (1)
+wait_time=$2
+
+for i in `seq 0 1 $length`
+do
+    # input から1文字切り出し、output に結合する
+    output=$output${input:$i:1} # (2)
+    echo -en $output
+
+    if [ $i -ne $length ]; then
+        # カーソルを行頭に戻す
+        echo -en '\r'
+
+        # 指定した時間待機
+        sleep $wait_time 
+    fi
+done
+

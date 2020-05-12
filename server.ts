@@ -1,11 +1,12 @@
-import { serve } from "https://deno.land/std@v0.12/http/server.ts";
+import { serve } from "https://deno.land/std@v0.29.0/http/server.ts";
 
 const body = new TextEncoder().encode("Hello World\n");
-const s = serve(":8080");
+const s = serve({ port: 8000 });
+console.log("http://localhost:8000/");
 
-window.onload = async () => {
-  console.log("http://localhost:8080/");
-  for await (const req of s) {
-    req.respond({ body });
-  }
-};
+for await (const req of s) {
+  req.respond({ body });
+}
+
+
+

@@ -4,7 +4,8 @@ function execute () {
   COMMAND=$1
   echo -n '$ '
   read IGNORE
-  echo -n "$ $COMMAND "
+  #echo -n "$ $COMMAND "
+  ./typing "$ $COMMAND" 0.02
   read IGNORE
   eval $COMMAND
 }
