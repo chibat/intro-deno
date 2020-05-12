@@ -14,7 +14,7 @@ rm -rf ~/.cache/deno
                                                                                                                                                                                                     
 execute 'curl -fsSL https://deno.land/x/install/install.sh | sh'
 
-execute 'export PATH=/home/tomofumi_chiba/.local/bin:$PATH'
+execute 'export PATH=/home/tomofumi_chiba/.deno/bin/deno:$PATH'
 
 execute 'deno --version'
 

@@ -14,15 +14,15 @@ execute 'view cat.ts'
 
 execute 'cat cat.ts'
 
-execute 'deno cat.ts -- /etc/passwd'
+execute 'deno run cat.ts /etc/passwd'
 
-execute 'deno run cat.ts --allow-read -- /etc/passwd'
+execute 'deno run --allow-read cat.ts /etc/passwd'
 
-execute 'deno run cat.ts --allow-read=/home -- /etc/passwd'
+execute 'deno run --allow-read=/home cat.ts /etc/passwd'
 
-execute 'deno run cat.ts --allow-read=/etc -- /etc/passwd'
+execute 'deno run --allow-read=/etc cat.ts /etc/passwd'
 
-execute 'deno run cat.ts --allow-read=/etc,/home -- /etc/passwd'
+execute 'deno run --allow-read=/etc,/home cat.ts /etc/passwd'
 
 execute 'view client.ts'
 
@@ -30,13 +30,13 @@ execute 'cat client.ts'
 
 execute 'deno run client.ts'
 
-execute 'deno run client.ts --allow-net'
+execute 'deno run --allow-net client.ts'
 
-execute 'deno run client.ts --allow-net=deno.land'
+execute 'deno run --allow-net=deno.land client.ts'
 
-execute 'deno run client.ts --allow-net=deno.land,google.com'
+execute 'deno run --allow-net=deno.land,google.com client.ts'
 
-execute 'deno run client.ts -A'
+execute 'deno run -A client.ts'
 
 echo "Next: server.ts"
 

@@ -16,7 +16,7 @@ execute 'view server.ts'
 
 execute 'cat server.ts'
 
-execute 'deno fetch server.ts'
+execute 'deno cache server.ts'
 
 execute 'deno info server.ts'
 
