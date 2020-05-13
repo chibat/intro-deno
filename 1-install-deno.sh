@@ -12,6 +12,12 @@ function execute () {
 
 rm -rf ~/.cache/deno
                                                                                                                                                                                                     
+if [ -n "$DENO_DIR" ]
+then
+  rm -rf $DENO_DIR/deps
+  rm -rf $DENO_DIR/gen
+fi
+
 execute 'curl -fsSL https://deno.land/x/install/install.sh | sh'
 
 execute 'export PATH=/home/tomofumi_chiba/.deno/bin/deno:$PATH'
