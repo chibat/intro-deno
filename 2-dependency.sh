@@ -12,7 +12,7 @@ function execute () {
 
 rm -rf ~/.cache/deno
                                                                                                                                                                                                     
-execute 'view server.ts'
+#execute 'view server.ts'
 
 execute 'cat server.ts'
 

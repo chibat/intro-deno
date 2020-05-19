@@ -10,7 +10,7 @@ function execute () {
   eval $COMMAND
 }
 
-execute 'view cat.ts'
+#execute 'view cat.ts'
 
 execute 'cat cat.ts'
 
@@ -24,7 +24,7 @@ execute 'deno run --allow-read=/etc cat.ts /etc/passwd'
 
 execute 'deno run --allow-read=/etc,/home cat.ts /etc/passwd'
 
-execute 'view client.ts'
+#execute 'view client.ts'
 
 execute 'cat client.ts'
 
