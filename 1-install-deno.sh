@@ -20,12 +20,12 @@ fi
 
 execute 'curl -fsSL https://deno.land/x/install/install.sh | sh'
 
-execute 'export PATH=/home/tomofumi_chiba/.deno/bin/deno:$PATH'
+execute 'export PATH=$PATH:$HOME/.deno/bin'
 
 execute 'deno --version'
 
-execute 'curl https://deno.land/std/examples/welcome.ts'
+execute 'curl https://deno.land/std@0.55.0/examples/welcome.ts'
 
-execute 'deno run https://deno.land/std/examples/welcome.ts'
+execute 'deno run https://deno.land/std@0.55.0/examples/welcome.ts'
 
 echo
