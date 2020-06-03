@@ -1,4 +1,4 @@
-import { serve } from "https://deno.land/std@v0.50.0/http/server.ts";
+import { serve } from "https://deno.land/std@v0.55.0/http/server.ts";
 
 const body = new TextEncoder().encode("Hello World\n");
 const s = serve({ port: 8000 });
